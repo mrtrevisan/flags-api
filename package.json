@@ -1,0 +1,9 @@
+{
+  "license" : "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "main": "node src/main.js"
+  }
+}
