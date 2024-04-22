@@ -27,11 +27,11 @@ app.get('/random', function (req, res) {
     const result = {
 		"name" : c.name.common,
 		"official" : c.name.official,
-		"pt-br" : c.translations.por.common,
 		"flag" : c.flags.svg,
 		"capital" : c.capital,
-		"lingua" : c.languages,
-		"continente" : c.continents
+		"lingua" :  Object.values(c.languages),
+		"continente" : c.continents,
+		"moeda" : Object.values(c.currencies).map(m => {return m.name})
     };
 
     res.json(result);
